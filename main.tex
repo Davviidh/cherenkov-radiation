@@ -1,41 +1,19 @@
 \documentclass[12pt,a4paper]{article}
 
-\usepackage{fontspec}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage{float}
+\usepackage[hidelinks]{hyperref}
+
 \usepackage{polyglossia}
 \setmainlanguage[numerals=arabic]{armenian}
-\setotherlanguage{english}
-\setmainfont{FreeSerif}     
-\newfontfamily\armenianfonttt{FreeSerif}  
+\setmainfont{FreeSerif}
+\newfontfamily\armenianfonttt{FreeSerif}
 
-\usepackage{amsmath,amssymb}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\usepackage[hidelinks]{hyperref}
-\usepackage{xurl}
-\urlstyle{same} 
+\sloppy
 
-% ---------- Figures ----------
-\usepackage{graphicx}
-\usepackage{caption}
-\captionsetup{labelsep=period}
-\renewcommand{\figurename}{Նկ.}
-\graphicspath{{images/}}  
-
-\newcommand{\picbox}[2]{%
-  \IfFileExists{images/#2}%
-    {\includegraphics[width=#1]{#2}}%
-    {\fbox{\parbox[c][0.6\linewidth][c]{#1}{\centering\small Նկար՝ \texttt{images/#2}}}}}
-\newcommand{\pic}[4][0.6\textwidth]{%
-  \begin{figure}[H]
-    \centering
-    \picbox{#1}{#2}
-    \caption{#3}
-    \label{#4}
-  \end{figure}}
-
-\title{\textbf{Չերենկովյան ճառագայթում}}
-\author{}
+\title{Չերենկովյան ճառագայթում}
 \date{}
 
 \begin{document}
@@ -68,7 +46,12 @@
 լույսի արագությունից մեծ արագությամբ ու ճառագայթում կապույտ գույնի
 լույս:
 
-\pic{img1.png}{Չերենկովյան ճառագայթում ջրի մեջ:}{fig:glow}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{images/img1.png}
+  \caption{Չերենկովյան ճառագայթում ջրի մեջ:}
+  \label{fig:glow}
+\end{figure}
 
 Ըստ քվանտային տեսության՝ լույսն իրենից ներկայացնում է լույսի քվանտների՝
 ֆոտոնների հոսք: Դրանցից ամեն մեկն ունի իրեն համապատասխան էներգիան՝
@@ -91,7 +74,12 @@ $\lambda$ ալիքի երկարություն: Էլեկտրոնի հետ բախ�
 $h\nu'$ էներգիայով, որին համապատասխանում է սկզբնականից ավելի մեծ $\lambda'$
 ալիքի երկարություն (նկ.~\ref{fig:compton}):
 
-\pic{img2.png}{Քոմփթոնի ցրում:}{fig:compton}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/img2.png}
+  \caption{Քոմփթոնի ցրում:}
+  \label{fig:compton}
+\end{figure}
 
 Վավիլով--Չերենկովի էֆեկտը բացատրվում է Հյուգենս--Ֆրենելի սկզբունքով: Այն
 ձևակերպելուց առաջ ծանոթանանք գերձայնային ինքնաթիռների աշխատանքի
@@ -106,20 +94,25 @@ $h\nu'$ էներգիայով, որին համապատասխանում է սկզ�
 հարվածային ալիք, որը մարդիկ ընկալում են որպես ձայնային պայթյուն: Դրան
 շատ նման սկզբունքով է աշխատում Հյուգենսի սկզբունքը օպտիկայում:
 
-\pic{img3.png}{Սովորական (ենթաձայնային) ինքնաթիռ:}{fig:subsonic}
-
-% Figures 4 and 5 side by side (two separate numbers)
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \begin{minipage}[t]{0.48\textwidth}
+  \includegraphics[width=0.6\textwidth]{images/img3.png}
+  \caption{Սովորական (ենթաձայնային) ինքնաթիռ:}
+  \label{fig:subsonic}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.48\textwidth}
     \centering
-    \picbox{\linewidth}{img4.png}
+    \includegraphics[width=\linewidth]{images/img4.png}
     \caption{Գերձայնային ինքնաթիռ:}
     \label{fig:sonic}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.48\textwidth}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
     \centering
-    \picbox{\linewidth}{img5.png}
+    \includegraphics[width=\linewidth]{images/img5.png}
     \caption{Հարվածային ալիք:}
     \label{fig:supersonic}
   \end{minipage}
@@ -133,7 +126,12 @@ $h\nu'$ էներգիայով, որին համապատասխանում է սկզ�
 առաջացման աղբյուր հենց այն պահին, երբ մասնիկն անցնում է այդ
 կետերով:
 
-\pic{img6.png}{Մասնիկի հետագիծը և $A, B, C, D, E$ կետերը ($v<u$):}{fig:points}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/img6.png}
+  \caption{Մասնիկի հետագիծը և $A, B, C, D, E$ կետերը ($v<u$):}
+  \label{fig:points}
+\end{figure}
 
 Հիմա ենթադրենք, որ մասնիկը շարժվում է $v$ արագությամբ ու մեր դիտարկած
 պահին այն $E$ կետում է գտնվում: $t$ ժամանակ առաջ այն գտնվում էր $A$ կետում, և
@@ -158,7 +156,12 @@ $h\nu'$ էներգիայով, որին համապատասխանում է սկզ�
 շոշափողները հատվում են մեր դիտարկած $E$ կետում: Իսկ սլաքներով նշված են
 լույսի ճառագայթման ուղղությունները:
 
-\pic{img7.png}{Ալիքային ճակատները, երբ $v>u$:}{fig:cone}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{images/img7.png}
+  \caption{Ալիքային ճակատները, երբ $v>u$:}
+  \label{fig:cone}
+\end{figure}
 
 Հենց այս երևույթի վրա հիմնվելով՝ Չերենկովն ու Վավիլովը հասկացել են, որ
 միջավայրում պետք է գոյություն ունենան մասնիկներ, որոնք լույսի փուլային
